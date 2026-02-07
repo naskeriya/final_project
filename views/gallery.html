@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/gallery.css">
+  <title>Imagiseum — Gallery</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header__logo">🎨Imagiseum</h1>
+      <nav class="header__nav hidden-on-mobile">
+        <a href="/">Create</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/auth" id="header-sign-in">Sign In</a>
+        <a href="/profile" id="header-profile" style="display: none;">Profile</a>
+      </nav>
+
+
+      <button class="header__burger button" id="burger" aria-label="Open navigation">☰</button>
+    </header>
+
+    <main class="container gallery">
+      <h1 class="gallery__heading">🎨 Imagiseum Gallery</h1>
+      <div class="gallery__filters">
+        <div class="gallery__filter-row">
+          <div class="gallery__search">
+            <input type="text" class="input" id="search" placeholder="Search prompts..." autocomplete="off" />
+          </div>
+          <div class="gallery__tag-selection">
+            <div class="tag-input-container">
+              <input type="text" id="tag-input" class="input" placeholder="Filter by tags..." autocomplete="off">
+              <div id="tag-suggestions" class="tag-suggestions"></div>
+            </div>
+          </div>
+        </div>
+        <div id="selected-tags" class="selected-tags"></div>
+      </div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+      <div class="gallery__empty"></div>
+    </main>
+
+    <footer class="footer">
+      <p>© Imagiseum — Museum of Imaginary Art</p>
+    </footer>
+  </div>
+
+  <script src="/js/auth-utils.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/gallery.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/auth.css">
+  <title>Imagiseum — Sign In</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header__logo">🎨Imagiseum</h1>
+      <nav class="header__nav hidden-on-mobile">
+        <a href="/">Create</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/auth" id="header-sign-in">Sign In</a>
+        <a href="/profile" id="header-profile" style="display: none;">Profile</a>
+      </nav>
+
+
+      <button class="header__burger button" id="burger" aria-label="Open navigation">☰</button>
+    </header>
+
+    <main class="container auth">
+      <div class="auth__container">
+        <h2>Sign Up</h2>
+        <form class="auth__form" id="signupForm" novalidate>
+          <input name="name" class="input auth__input" placeholder="Name" required />
+          <input name="email" class="input auth__input" placeholder="Email" required />
+          <input name="password" class="input auth__input" type="password" placeholder="Password" required />
+          <button class="button" type="submit">Sign Up</button>
+          <div class="error" id="signupError" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="auth__container">
+        <h2>Log In</h2>
+        <form class="auth__form" id="loginForm" novalidate>
+          <input name="email" class="input auth__input" placeholder="Email" required />
+          <input name="password" class="input auth__input" type="password" placeholder="Password" required />
+          <button class="button" type="submit">Log In</button>
+          <div class="error" id="loginError" aria-live="polite"></div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© Imagiseum — Museum of Imaginary Art</p>
+    </footer>
+  </div>
+
+  <script src="/js/auth-utils.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/profile.css">
+  <title>Imagiseum — Profile</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header__logo">🎨Imagiseum</h1>
+      <nav class="header__nav hidden-on-mobile">
+        <a href="/">Create</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/auth" id="header-sign-in">Sign In</a>
+        <a href="/profile" id="header-profile" style="display: none;">Profile</a>
+      </nav>
+
+
+      <button class="header__burger button" id="burger" aria-label="Open navigation">☰</button>
+    </header>
+
+    <main class="container">
+      <section class="profile-page">
+        <header class="profile-page__header">
+          <div class="profile-page__info">
+            <h1 id="profileName">Loading...</h1>
+            <p id="profileEmail" class="profile-page__email"></p>
+          </div>
+          <div class="profile-page__actions">
+            <button id="editProfileBtn" class="button">Edit Profile</button>
+            <button id="logoutBtn" class="button button--red">Log Out</button>
+          </div>
+        </header>
+
+        <div class="profile-page__content">
+          <h2 class="section-title">My Creations</h2>
+          <div id="userImagesGrid" class="gallery-grid">
+            <p class="muted">Fetching your masterpieces...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© Imagiseum — Museum of Imaginary Art</p>
+    </footer>
+  </div>
+
+  <script src="/js/auth-utils.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+
+</html>
