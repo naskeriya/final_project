@@ -55,7 +55,7 @@ Imagiseum is AI-powered image gallery and sharing platform that allows users to 
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd assignment4
+   cd final_project
    ```
 
 2. **Install dependencies:**
